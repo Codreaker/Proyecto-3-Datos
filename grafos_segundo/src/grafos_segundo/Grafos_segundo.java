@@ -14,74 +14,67 @@ public class Grafos_segundo {
    public int vertices;
     public int edges;
   
-    // Set a maximum limit to the vertices
+    // Limite de vertices
     final int MAX_LIMIT = 20;
   
-    // A Random instance to generate random values
+    // Generar valores random
     Random random = new Random();
-    // An adjacency list to represent a graph
+    // Representar el grafo
     public List<List<Integer> > adjacencyList;
   
-    // Creating the constructor
+    // Constructor
     public Grafos_segundo()
     {
-        // Set a maximum limit for
-        // the number of vertices say 20
+        // Definir limite para los vertices
+        
         this.vertices = random.nextInt(MAX_LIMIT) + 1;
   
-        // compute the maximum possible number of edges
-        // and randomly choose the number of edges less than
-        // or equal to the maximum number of possible edges
+        // maximo de aristas y escoger random el de posibles aristas
+        
         this.edges
             = random.nextInt(computeMaxEdges(vertices)) + 1;
   
-        // Creating an adjacency list
-        // representation for the random graph
+        // Crear una lista de adjacencia para representar el grafo 
+        
         adjacencyList = new ArrayList<>(vertices);
         for (int i = 0; i < vertices; i++)
             adjacencyList.add(new ArrayList<>());
   
-        // A for loop to randomly generate edges
+        //Un loop para las aristas generadas random 
         for (int i = 0; i < edges; i++) {
-            // randomly select two vertices to
-            // create an edge between them
+            // escoger 2 vertices aleatorias y crear aristas entre ellos
             int v = random.nextInt(vertices);
             int w = random.nextInt(vertices);
   
-            // add an edge between them
+            // agregar arista entre ellos
             addEdge(v, w);
         }
     }
   
-    // Method to compute the maximum number of possible
-    // edges for a given number of vertices
+    //Metodo para computar el maximo numero de aristas dado un numero de vertices 
     int computeMaxEdges(int numOfVertices)
     {
-        // As it is an undirected graph
-        // So, for a given number of vertices
-        // there can be at-most v*(v-1)/2 number of edges
+        
         return numOfVertices * ((numOfVertices - 1) / 2);
     }
   
-    // Method to add edges between given vertices
+    // Metodo para agregar aristas entre vertices dados 
     void addEdge(int v, int w)
     {
-        // Note: it is an Undirected graph
-  
-        // Add w to v's adjacency list
+       
         adjacencyList.get(v).add(w);
   
-        // Add v to w's adjacency list
+        
         adjacencyList.get(w).add(v);
     }
   
     public static void main(String[] args)
     {
-        // Create a GFGRandomGraph object
+        // Crear un objeto random de la clase
         Grafos_segundo randomGraph = new Grafos_segundo();
   
-        // Print the graph
-        System.out.println("The generated random graph :");
+        // Imprime el grafo
+        System.out.println("El grafo generado :");
         for (int i = 0;
              i < randomGraph.adjacencyList.size(); i++) {
             System.out.print(i + " -> { ");
@@ -90,7 +83,7 @@ public class Grafos_segundo {
                 = randomGraph.adjacencyList.get(i);
   
             if (list.isEmpty())
-                System.out.print(" No adjacent vertices ");
+                System.out.print(" No vertices adyacentes ");
             else {
                 int size = list.size();
                 for (int j = 0; j < size; j++) {
