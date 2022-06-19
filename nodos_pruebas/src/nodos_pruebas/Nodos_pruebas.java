@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package nodos_pruebas;
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -16,14 +18,21 @@ public class Nodos_pruebas {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        GraphicTree tree= new GraphicTree();
-        tree.add(1);
-        tree.add(3); //Se añaden los nodos
-        tree.add(4);
-        tree.add(23);
-        tree.add(2);
-        tree.add(64);
+        String m =JOptionPane.showInputDialog("cuantos nodos?");
         
+        int c = Integer.parseInt(m);
+        int max= 1000;
+        
+        GraphicTree tree= new GraphicTree();
+        int contador =0;
+        while (contador < c){
+        
+        tree.add((int)(Math.random()*max)+1);
+        contador++;
+        
+        
+        
+        }
         tree.getReady(tree.root);
         tree.drawTree();
     }
