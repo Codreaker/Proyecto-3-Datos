@@ -30,7 +30,7 @@ public class Historial extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabelTittle = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        jButtonMenu = new javax.swing.JButton();
         jButtonNext = new javax.swing.JButton();
         jButtonBack = new javax.swing.JButton();
         jButtonDelete = new javax.swing.JButton();
@@ -46,14 +46,14 @@ public class Historial extends javax.swing.JFrame {
         jLabelTittle.setText("Ant Wars");
         jPanel1.add(jLabelTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, -1));
 
-        jButton3.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
-        jButton3.setText("Menu");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonMenu.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
+        jButtonMenu.setText("Menu");
+        jButtonMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonMenuActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 25, -1, -1));
+        jPanel1.add(jButtonMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 25, -1, -1));
 
         jButtonNext.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
         jButtonNext.setText("Next");
@@ -86,7 +86,7 @@ public class Historial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButtonMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenuActionPerformed
         /**
         * Funcion de cerrar ventana y abrir el historial
         */
@@ -96,7 +96,7 @@ public class Historial extends javax.swing.JFrame {
         menu.setLocationRelativeTo(null);
         menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButtonMenuActionPerformed
 
     private void jButtonNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNextActionPerformed
         // TODO add your handling code here:
@@ -138,9 +138,9 @@ public class Historial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonBack;
     private javax.swing.JButton jButtonDelete;
+    private javax.swing.JButton jButtonMenu;
     private javax.swing.JButton jButtonNext;
     private javax.swing.JLabel jLabelTittle;
     private javax.swing.JPanel jPanel1;
