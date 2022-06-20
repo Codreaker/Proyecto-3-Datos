@@ -11,7 +11,7 @@ import javax.swing.JPanel;
  *
  * @author Noel
  */
-public class drawingTree extends JPanel {
+public class drawingTree extends JPanel {//clase donde dibuja el grafo en el panel establecido
     static nodos[]copietab=new nodos[100];
     int n=0;
     drawingTree(nodos[]nodes,int n)
@@ -21,7 +21,7 @@ public class drawingTree extends JPanel {
     
     }
     
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g){//forma que tendran los nodos y aristas de cada lado
         for(int x=0; x<n; x++){
            g.drawOval(copietab[x].x, copietab[x].y, 40, 40);
         String a= String.valueOf(copietab[x].data);

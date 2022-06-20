@@ -8,7 +8,8 @@ package nodos_pruebas;
  *
  * @author Noel
  */
-public class Arbol {
+public class Arbol {//Clase donde se genera el arbol, almacenando los nodos y distribuyendolos
+    //Esto mediante la asignacion de valores temporales
     
     nodos root;
     nodos temp;
@@ -33,7 +34,7 @@ public class Arbol {
             temp=root;
             while(ok)
              
-           if (temp.data> data){
+           if (temp.data> data){//asignar un nodo a la izquierda
                if(temp.left==null){
                    temp.left=node;
                    temp.left.x=temp.x -w;
@@ -48,7 +49,7 @@ public class Arbol {
                }
            }
            else{
-               if (temp.rigth==null){
+               if (temp.rigth==null){//asignar un nodo a la derecha
                    temp.rigth=node;
                    temp.rigth.x= temp.x +w;
                    temp.rigth.y= temp.y +80;

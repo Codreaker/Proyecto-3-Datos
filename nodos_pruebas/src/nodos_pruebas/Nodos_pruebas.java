@@ -18,14 +18,15 @@ public class Nodos_pruebas {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        String m =JOptionPane.showInputDialog("cuantos nodos?");
+        String m =JOptionPane.showInputDialog("cuantos nodos?");//abre cuador de dialogo para anotar los nodos que se quiere
         
-        int c = Integer.parseInt(m);
-        int max= 1000;
+        int c = Integer.parseInt(m);//hace el string del cuadro de dialogo a un int
+        int max= 20;//maximo de nodos
         
-        GraphicTree tree= new GraphicTree();
+        GraphicTree tree= new GraphicTree();//genera el "grafo" aleatorio
+        //Se uso como base un arbol de busqueda, debido a su similitud en estructura basica
         int contador =0;
-        while (contador < c){
+        while (contador < c){//funcion que genera nodos de valores aleatorios hasta que se cumpla el requisitos de nodos pedidos
         
         tree.add((int)(Math.random()*max)+1);
         contador++;

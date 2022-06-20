@@ -8,7 +8,7 @@ package nodos_pruebas;
  *
  * @author Noel
  */
-public class nodos {
+public class nodos {//se les asigna un valor a los nodos creados y una posicion entre derecha e izquierda
     
     Integer data;
     nodos rigth;
