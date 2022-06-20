@@ -6,41 +6,44 @@ package antvillage;
 import java.io.*;
 import java.util.*;
 import java.util.Random;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Noel
  */
 public class AntVillage {
     
-   static int maxVertices= 20;
-   
+   static int maxVertices= 20; //El maximo de vertices a generar del grafo
+   //Funcion para comprobar si se añadio una nueva arista
    public static boolean checkAcyclic(int[][]edge, int ed, boolean[] check, int v){
        int i;
        boolean value;
-       
+       //verificar si el vertice ya ha sido visitado 
        if(check[v]==true)
            return false;
        else{
            check[v]=true;
-           
+           //Para todos los vertices conecten entre si
            for(i=ed; i>=0; i--){
                if (edge[i][0]==v)
                    return checkAcyclic(edge, ed, check, edge[i][1]);
            }
        }
+       //En caso de que se llegue al final del recorrido inicial y hayan vertices sin asignar, 
+       //los vuelva a deasignar para volver hacer el recorrido hasta que todos se conecten
        check[v] = false;
         
         if (i == 0)
             return true;
         return true;
    }
-
+//Generar un grafo aleatorio apartir de la cantidad de vertices que quiera
    public static void generateRandomGraphs(int e){
        int i=0, j=0, count=0;
        int[][] edge = new int[e][2];
         boolean[] check = new boolean[21];
         Random rand = new Random();
-        
+        //Hacer una conecion entre 2 vertices aleatorios
         while (i < e) {
             
             edge[i][0] = rand.nextInt(maxVertices) + 1;
@@ -86,8 +89,11 @@ public class AntVillage {
      */
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
-        int e=4;
+        String m =JOptionPane.showInputDialog("cuantos nodos?");
+        int e = Integer.parseInt(m);
+        
         System.out.println("Cuantos vertices? :"+ e);
+        //generar un grafo directo aleatorio
         generateRandomGraphs(e);
     }
     
