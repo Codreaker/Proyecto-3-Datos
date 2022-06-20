@@ -1,7 +1,6 @@
 package com.mycompany.proyecto3;
 
 
-
 public class ListaDoble{
 
     private NodoDoble inicio,fin;

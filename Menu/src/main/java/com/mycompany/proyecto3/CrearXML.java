@@ -85,26 +85,15 @@ public class CrearXML {
         documento.appendChild(entrada);
 
         // Creamos el Elemento de titulo
-        Element titulo = documento.createElement("titulo");
-        // Establecemos el contenido del titulo
-        titulo.setTextContent("Creacion de XML");
-        // Indicamos que el elemento titulo desciende de entrada
-        entrada.appendChild(titulo);
+        Element Dijkstra = documento.createElement("Dijkstra");
+        Dijkstra.setTextContent("Puntuacion:");
+        entrada.appendChild(Dijkstra);
 
         //Creamos mas elementos
-        Element autor = documento.createElement("autor");
-        autor.setTextContent("hashRaygoza");
-        entrada.appendChild(autor);
+        Element Bruta = documento.createElement("Bruta");
+        Bruta.setTextContent("Puntuacion:");
+        entrada.appendChild(Bruta);
 
-        //Elemento fecha
-        Element fecha = documento.createElement("fecha");
-        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
-        Calendar calendario = Calendar.getInstance();
-        Date date = new Date(calendario.getTimeInMillis());
-
-        fecha.setTextContent(formato.format(date));
-        entrada.appendChild(fecha);
-        
         return documento;
     }
     

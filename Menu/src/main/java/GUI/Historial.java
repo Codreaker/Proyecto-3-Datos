@@ -17,6 +17,27 @@ public class Historial extends javax.swing.JFrame {
      */
     public Historial() {
         initComponents();
+        
+        /*
+        try {
+            EjemploXML ejemploXML = new EjemploXML();
+            Document documento = ejemploXML.crearDocumento();
+            
+            System.out.println(ejemploXML.convertirString(documento));
+            
+            ejemploXML.escribirArchivo(documento, "ejemplo.xml");            
+            
+        } catch (ParserConfigurationException ex) {
+            LOGGER.log(Level.SEVERE, "Error de configuracion");
+            LOGGER.log(Level.SEVERE, null, ex);
+        } catch (TransformerException ex) {
+            LOGGER.log(Level.SEVERE, "Error de transformacion XML a String");
+            LOGGER.log(Level.SEVERE, null, ex);
+        }
+        
+    }
+}
+        */
     }
 
     /**
