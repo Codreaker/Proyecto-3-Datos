@@ -12,7 +12,16 @@ import javax.swing.JOptionPane;
  * @author Noel
  */
 public class AntVillage {
-    
+    /**
+     * Instituto Tecnológico de Costa Rica
+     * Campus Central Cartago
+     * Ingeniería en computadores
+     * Proyecto 3
+     * 
+     * Esta clase se encarga de crear el grafo de forma aleatoria con base a la cantidad de vectores
+     * que brinda el usuario, con dichos vectores crea las aristas que a su vez conectan distintos 
+     * al azar
+     */
    static int maxVertices= 20; //El maximo de vertices a generar del grafo
    //Funcion para comprobar si se añadio una nueva arista
    public static boolean checkAcyclic(int[][]edge, int ed, boolean[] check, int v){

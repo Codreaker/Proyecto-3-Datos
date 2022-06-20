@@ -13,7 +13,13 @@ import javax.swing.JOptionPane;
 public class Nodos_pruebas {
 
     /**
-     * @param args the command line arguments
+     * Instituto Tecnológico de Costa Rica
+     * Campus Central Cartago
+     * Ingeniería en computadores
+     * Proyecto 3
+     * 
+     * Esta clase es la encargada de crear los nodos y mostrar los nodos en pantalla 
+     * 
      */
     public static void main(String[] args) {
         // TODO code application logic here
